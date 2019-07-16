@@ -1,0 +1,203 @@
+// SCSS styles for block will be here
+@import '../../scss/index.scss';
+
+.slider-best-vpn {
+    font-family: $ff-monts;
+    padding: 0 1.6rem;
+    
+
+    &__inner {
+        box-shadow: 0 0.4rem 1.4rem 0 rgba(92,108,134,.42);
+        max-width: 100rem;
+        margin: auto; 
+    }
+
+    & .slick-arrow {
+        background-color: transparent;
+        background: url("https://dcs2020niuc7k.cloudfront.net/website20/images/icon__prev-slide.svg?d4de4df25162183495a0e2f40e339ffd") no-repeat;
+        border: none;
+        color: transparent;
+        cursor: pointer;
+        display: block;
+        line-height: 0;
+        left: auto;  
+        font-size: 0;
+        height: 20px;
+        outline: 0;  
+        padding: 0;
+        position: absolute;
+        width: 20px;
+        top: 3rem;
+        z-index: 1;
+
+        &.slick-prev {
+            right: 6.5rem; 
+            transform: translate(0,0);
+        }
+
+        &.slick-next {
+            right: 2.7rem;
+            transform: rotate(180deg);
+        }
+    }
+
+    & .slick-list, & .slick-track {
+        transform: translate3d(0,0,0);
+    }
+
+    & .slick-list {
+        display: block;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+    }
+
+    & .slick-track {
+        display: flex;
+        left: 0;
+        position: relative;
+        top: 0;
+    }
+
+    & .slick-track:after, .slick-track:before {
+        content: "";
+        display: table;
+    }
+
+    &__slide.slick-slide {
+        align-items: center;   
+        background-color: #f6f9fc;
+        border-radius: .6rem;
+        color: #344867;
+        display: flex;
+        min-height: 1px;
+        height: initial;
+        float: left;
+        outline: 0;
+    }
+
+    &__image-holder_desktop {
+        display: block;
+        width: 30rem;
+    }
+
+    &__image-holder_desktop img {
+        display: block;
+        height: 35.3rem;
+        border-style: none;
+        vertical-align: middle;
+        max-width: 100%;
+    }
+
+    &__image-holder_mobile {
+        display: none;
+        max-height: 54vw;
+    }
+
+    &__content {
+        flex-shrink: 9;
+        padding: 3rem 2rem 4rem 6rem;
+        height: 35.3rem;
+        color: #344867;
+    }
+
+    &__header {
+        font-size: 2rem;
+        font-weight: 900;
+        letter-spacing: -.2px;
+        line-height: 2.15em;
+    }
+
+    &__subheader {
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 2.07em;
+    }
+
+    &__description {
+        font-size: 1.8rem;
+        line-height: 1.72em;
+        font-weight: 500;
+        font-style: italic;
+        max-height: 15rem;
+        margin-top: 1.6rem;
+        overflow: auto;
+    }
+
+    &__socials {
+        display: block;
+        margin-top: 1.6rem;
+    }
+
+    &__social {
+        display: inline-block;
+        height: 2rem;
+        margin-right: 2rem;
+        vertical-align: middle;
+        width: 2rem;
+
+        > img {
+            width: auto;
+            max-width: initial;
+            height: 100%;
+        }
+    }
+
+    @include breakpoint(lg down) {
+
+        & .slick-arrow {
+            background: url("https://dcs2020niuc7k.cloudfront.net/website20/images/icon__prev-slide_mobile.svg?d74200b76d2be37e2fa1bd0a87d2a333") 50% 50%/contain no-repeat;
+            top: 55vw;
+        }
+
+        &__slide.slick-slide {
+            display: block;
+        }
+
+        &__image-holder {
+            width: 100%;
+        }
+
+        &__image-holder_desktop {
+            display: none;
+            width: 100%;
+        }
+
+        &__image-holder_mobile {
+            display: block;
+            max-height: 54vw;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__content {
+            flex-shrink: unset;
+            height: auto;
+            padding: 7rem 1.6rem 3.5rem;
+            position: relative;
+        }
+
+        &__subheader {
+            font-size: 1.4rem;
+            line-height: 1.57em;
+        }
+
+        &__description {
+            font-size: 1.5rem;
+            line-height: 1.67em;
+        }
+
+        &__socials {
+            margin-top: 2.2rem;
+            position: absolute;
+            top: 0;
+        }
+
+        &__social {
+            margin-right: 1.3rem;
+        }
+    }
+}

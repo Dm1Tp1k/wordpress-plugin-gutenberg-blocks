@@ -1,0 +1,28 @@
+// SCSS styles for block will be here
+@import '../../scss/index.scss';
+
+.partners-best-vpn {
+    padding: 0 1.6rem;
+
+    &__image_mobile {
+        display: none;
+    }
+
+    &__image_desktop {
+        display: block;
+        margin-bottom: 1rem;
+        max-width: 91rem;
+        margin: 1rem auto 1.5rem;
+    }
+
+    @include breakpoint(md down) {
+
+        &__image_desktop {
+            display: none; 
+        }
+      
+        &__image_mobile {
+            display: block;
+        }  
+    }
+}

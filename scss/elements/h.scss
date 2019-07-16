@@ -1,0 +1,12 @@
+.h {
+    &_monts-b-29-35 {
+        font: 700 2.9rem/3.5rem "Montserrat", "Lato", "Arial", "sans-serif";
+    }
+
+    // fonts for mobile
+    @include breakpoint(sm down) {
+        &_monts-b-18-23-mobile {
+            font: 700 1.8rem/2.3rem "Montserrat", "Lato", "Arial", "sans-serif";
+        }
+    }
+}

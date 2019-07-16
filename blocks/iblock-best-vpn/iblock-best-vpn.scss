@@ -1,0 +1,110 @@
+// SCSS styles for block will be here
+@import '../../scss/index.scss';
+@import './iblock-best-vpn.vars.scss';
+
+.iblock-best-vpn {
+    $b: &;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 3rem;
+    }
+
+    &__info {
+        width: 55%;
+    }
+
+    &__image-holder {
+        width: 45%;
+    }
+
+    &__info {
+        margin-top: 6.5rem;
+    }
+
+    &__image-holder {
+        text-align: right;
+    } 
+
+    &__image {
+        width: 45rem;
+    }
+
+    &__title-holder {
+        margin-bottom: 3rem;
+
+        > .h {
+            color: #091a36;
+        }
+    }
+
+    &__text-holder {
+        margin-bottom: 4rem;
+
+        > .p {
+            color: #243959;
+        }
+    }
+
+    @include breakpoint(lg down) {
+
+        &__inner {
+            padding: 0;
+        }
+        
+        &__info, &__image-holder {
+            width: 100%;
+        }
+
+        &__info {
+            margin-top: 5rem;
+            order: 2;
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+
+        &__image-holder {
+            text-align: center;
+        }
+
+        &__title-holder {
+            margin-bottom: 2rem;
+    
+            > .h {
+                color: #283b58;
+            }
+        }
+    }
+
+    @include breakpoint(sm down) {
+
+        &__btn-holder .btn {
+            @include btn_alina-tr-blue-h45;
+        }
+    }
+
+
+     // Modification: image on left side
+     &_img-left {
+        #{$b}__info {
+            order: 2;
+            padding-left: 6.6rem;
+        }
+
+        #{$b}__image-holder {
+            text-align: left;
+        }
+
+        @include breakpoint(lg down) {
+            #{$b}__image-holder {
+                text-align: center;
+            }
+
+            #{$b}__info {
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
+    }
+}

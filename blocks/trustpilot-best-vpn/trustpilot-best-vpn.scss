@@ -1,0 +1,82 @@
+// SCSS styles for block will be here
+@import '../../scss/index.scss';
+
+.trustpilot-best-vpn {
+    text-align: center;
+
+    &__widget {
+        background: url("https://dcs2020niuc7k.cloudfront.net/website20/images/bg__trustpilot-1.svg?f79193c9fd6b4864aef8764c5e04701d") 50% 50%/contain no-repeat;
+        min-height: 9rem;
+        min-width: 58rem;
+        font-family: $ff-monts;
+        text-align: center;
+    }
+
+    &__inner {
+        align-items: center;
+        display: flex;
+        height: 7.9rem;
+        justify-content: center;
+        padding: 1.4rem 7rem;
+    }
+
+    &__images {
+        display: inline-block;
+    }
+
+    &__logo {
+        background-color: transparent;
+        color: #3e88ff;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    &__logo img {
+        margin-top: -.3rem;
+        margin-right: 1rem;
+    }
+
+    &__stars {
+        margin-bottom: -.2rem;
+    }
+
+    &__description {
+        color: #283b58;
+        display: inline-block;
+        font-size: 1.2rem;
+        line-height: 1.5em;
+        margin-bottom: -.9rem;
+        margin-left: 1rem;
+    }
+
+  
+    @include breakpoint (md down) {
+
+        &__widget {
+            background: white;
+            border-radius: .8rem;
+            box-shadow: 0 0.4rem 1.4rem 0 #ccd5e3;
+            display: inline-block;
+            min-width: initial;
+            width: auto;
+        }
+
+        &__inner {
+            flex-direction: column;
+            height: auto;
+            padding: 1.9rem 1.6rem 2.5rem;
+        }
+
+        &__images {
+            margin-bottom: 1rem;
+        }
+
+        &__stars {
+            margin-bottom: 0;
+        }
+
+
+    
+    }
+
+}

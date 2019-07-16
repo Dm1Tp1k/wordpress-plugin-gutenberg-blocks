@@ -1,0 +1,20 @@
+.p {
+    &_monts-20-32 {
+        font: 2rem/3.2rem "Montserrat", "Lato", "Arial", "sans-serif";
+    }
+
+    @include breakpoint(sm down) {
+
+        &_monts-13-19-sm {
+            font: 1.3rem/1.9rem "Montserrat", "Lato", "Arial", "sans-serif";
+        }
+
+        &_nls-02-sm {
+            letter-spacing: -0.02rem;
+        }
+
+        &_nls-04-sm {
+            letter-spacing: -0.04rem;
+        }
+    }
+}

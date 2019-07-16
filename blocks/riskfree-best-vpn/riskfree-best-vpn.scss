@@ -1,0 +1,56 @@
+// SCSS styles for block will be here
+@import '../../scss/index.scss';
+
+.riskfree-best-vpn {
+
+    align-items: center;
+    color: #fff;
+    display: flex;
+    font-family: $ff-monts;
+    justify-content: center;
+
+    &__icon {
+        margin-right: 5.7rem;
+        width: 15rem;
+    }
+
+    &__header {
+        font-size: 2.6rem;
+        line-height: 1.58em;
+        margin-bottom: .4rem;
+        font-weight: 700;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        line-height: 1.56em;
+        font-weight: 500;
+    }
+    
+    @include breakpoint(md down) {
+        padding: 0 1.6rem;
+
+        &__header {
+            font-size: 2.2rem;
+            line-height: 1.41em;
+            margin-bottom: 1rem;
+        }
+           
+        &__text {
+            font-size: 1.4rem;
+            line-height: 1.79em;
+        }
+    }
+
+    @include breakpoint(sm down) {
+
+        flex-direction: column;
+        text-align: center;
+
+        &__icon {
+            margin-bottom: 2.8rem;
+            margin-right: 0;
+            width: 13rem;
+        }
+    }
+}

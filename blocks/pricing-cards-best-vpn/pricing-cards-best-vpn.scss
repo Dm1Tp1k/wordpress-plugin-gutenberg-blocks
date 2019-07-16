@@ -1,0 +1,326 @@
+// SCSS styles for block will be here
+@import '../../scss/index.scss';
+
+.pricing-cards-best-vpn {
+    $b: &;
+
+    line-height: 1.5;
+    padding: 0 1.6rem;
+    
+    &__inner {
+        align-items: stretch;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15.4rem;
+        margin: 5rem auto 0;
+        max-width: 96rem;
+    }
+
+    &__card-holder {
+        margin: 0 .8rem;
+    }
+
+    &__card {
+        background-color: #fff;
+        border-radius: .4rem;
+        box-shadow: 0 0.4rem 1.4rem 0 rgba(0,0,0,.15);
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        font-family: $ff-monts;
+        margin: auto;
+        height: 100%;
+        padding: 2.8rem 1.6rem;
+        position: relative;
+        text-align: center;
+        transition: box-shadow .2s;
+        justify-content: space-between;
+        width: 30rem;
+
+        &::before {
+            content: '';
+            height: 2.5rem;
+            left: 1.6rem;
+            position: absolute;
+            top: 1.6rem;
+            width: 2.5rem;
+        }
+    }
+
+    &__mark {
+        background: #ffd82f;
+        border-top-left-radius: .4rem;
+        border-top-right-radius: .4rem;
+        bottom: 100%;
+        color: #2c4367;
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 600;
+        left: 0;
+        padding: .3em 13%;
+        position: absolute;
+        right: 0;
+
+        .text-uppercase {
+            text-transform: uppercase;
+        }
+    }
+
+    &__top-icon {
+        margin-bottom: 3rem;
+    }
+
+    &__title {
+        color: #27324b;
+        font-size: 2rem;
+        font-weight: 900;
+        margin-bottom: .2rem;
+    }
+
+    &__price {
+        color: #0047ff;
+        font-size: 5.5rem;
+        font-weight: 700;
+        margin-bottom: -1.4rem;
+
+        .lp-pricing-card__price sup {
+            color: inherit;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-right: -.2rem;
+            top: -.1em;
+        }
+    }
+
+    &__per-month {
+        color: #31415b;
+        margin-bottom: 2.9rem;
+        font-size: 1.6rem;
+        font-weight: 900;
+    }
+
+    &__description {
+        color: #5c6c86;
+        font-size: 1.3rem;
+    }
+
+    &__old-price {
+        color: #0047ff;
+        display: block;
+        font-size: 1.3rem;
+        text-align: center;
+        text-decoration: line-through;
+    }
+
+    &__description-text {
+        color: #5c6c86;
+        font-size: 1.3rem;
+    }
+
+    &__card_active {
+
+        #{$b}__border {
+            border-color: #0047ff;
+            border-width: .2rem;
+        }
+    }
+
+    &__button-wrapper {
+        margin-bottom: 3rem;
+        margin-top: 3.2rem;
+        text-align: center;
+    }
+
+    &__button {
+        background: #2e68ff;
+        border-radius: 3rem;
+        border: .1rem solid #2e68ff;
+        color: #fff;
+        display: inline-block;
+        font-size: 1.8rem;
+        min-width: 83%;
+        padding: 1rem 3.4rem;
+        text-transform: none;
+        user-select: none;
+    }
+
+    &__notification {
+        background-image: url("https://dcs2020niuc7k.cloudfront.net/website20/images/icon__notification_lp-pricing.svg?9176a16c4bc9002b9f35d47245cac9a9");
+        background-repeat: no-repeat;
+        background-color: #dae4f4;
+        background-position: .9rem 1.8rem;
+        border: solid .1rem #b6c1d4;
+        border-radius: .3rem;
+        color: #2c4367;
+        font-size: 1.2rem;
+        font-family: $ff-monts;
+        padding: 1.8rem 1rem 1.8rem 3rem;
+        letter-spacing: -.02rem;
+        line-height: 1.43;
+        display: none;
+        max-width: 30rem;
+        margin: 2.1rem auto 0;
+        text-align: left;
+        transition: opacity .4s,transform .4s;
+    }
+
+    &__border {
+        border-radius: .4rem;
+        border: .1rem solid #bdc7d8;
+        bottom: -.1rem;
+        content: '';
+        left: -.1rem;
+        pointer-events: none;
+        position: absolute;
+        transition: border .2s,opacity .2s;
+        right: -.1rem;
+        top: -.1rem;
+    }
+
+    &__card::after, &__card::before {
+        background: url("https://dcs2020niuc7k.cloudfront.net/website20/images/icon__checkbox.svg?1db3120ec8a94388447936b629d32486") 50% 50%/contain no-repeat;
+        content: '';
+        height: 2.5rem;
+        left: 1.6rem;
+        position: absolute;
+        top: 1.6rem;
+        width: 2.5rem;
+    }
+
+    &__card_popular.pricing-cards-best-vpn__card_active::after {
+        background: url("https://dcs2020niuc7k.cloudfront.net/website20/images/icon__check_active_popular.svg?d26f138d89a567aad52dfe9ebdd81695") 50% 50%/contain no-repeat;
+    }
+
+    &__card_popular.pricing-cards-best-vpn__card_active::before {
+        background: url("https://dcs2020niuc7k.cloudfront.net/website20/images/icon__check_active.svg?d26f138d89a567aad52dfe9ebdd81695") 50% 50%/contain no-repeat;
+    }
+
+    &__card_active::after {
+        background: url("https://dcs2020niuc7k.cloudfront.net/website20/images/icon__check_faded.svg?c8cecb0e2c178aa130650db636250815") 50% 50%/contain no-repeat;
+    }
+
+    
+    &__card_active+.notification {
+        display: block;
+        opacity: 1;
+    }
+
+    &__card_popular {
+        background-image: linear-gradient(to bottom,#15d6fa,#6240ff);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+
+        #{$b}__price {
+            color: white;
+        }
+
+        #{$b}__title {
+            color: white;
+        }
+
+        #{$b}__per-month {
+            color: white;
+        }
+
+        #{$b}__description {
+            color: white;
+        }
+
+        #{$b}__old-price {
+            color: white;
+        }
+
+        #{$b}__description :not(#{$b}__old-price) {
+            opacity: .7;
+        }
+
+        #{$b}__description-text {
+            color: white;
+        }
+
+        #{$b}__button {
+            background-color: rgba(255,255,255,.13);
+            border-color: #fff;
+        }
+
+        #{$b}__border {
+            opacity: 0;
+        }
+    }
+
+    &__card_active {
+
+        #{$b}__border {
+            border-color: #0047ff;
+            border-width: .2rem;
+        }
+
+        &__notification {
+            display: block;
+            opacity: 1;
+        }
+    }
+
+
+    @include breakpoint(lg down) {
+       
+        &__inner {
+            align-items: stretch;
+            flex-direction: column;
+        }
+
+        &__card-holder {
+            margin: 1rem 0;
+        }
+
+        &__card {
+            padding-top: 3.7rem;
+            width: 33rem;
+        }   
+
+        &__top-icon {
+            margin-bottom: .1rem;
+        }
+
+        &__title {
+            margin-bottom: 0;
+        }
+
+        &__price {
+            font-size: 4.5rem;
+        }
+         
+        &__per-month {
+            margin-bottom: 1rem;
+        }
+
+        &__old-price {
+            display: inline-block;
+        }
+
+        &__button-wrapper {
+            margin-bottom: 3rem;
+            margin-top: 2rem;
+        }
+
+        &__button {
+            font-size: 1.6rem;
+            min-width: 72%;
+        }
+    }
+
+    @include breakpoint(md down) {
+
+        &__notification {
+            font-size: 1.4rem;
+            max-width: 42rem;
+        }
+    }
+
+    @include breakpoint(sm down) {
+
+        &__card {
+            width: 100%;
+        }   
+    }
+}

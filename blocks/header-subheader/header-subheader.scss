@@ -1,0 +1,39 @@
+// SCSS styles for block will be here
+@import '../../scss/index.scss';
+
+.header-subheader {
+    font-family: $ff-monts;
+    padding: 0 2rem;
+    text-align: center;
+
+    &__header .h {
+        color: #091a36;
+        font-size: 2.9rem;
+        font-weight: 700;
+        line-heght: 3.5rem;
+        margin-bottom: 1.2rem;
+    }
+
+    &__subheader .h {
+        color: #243959;
+        font-size: 2.2rem;
+        line-heght: 4.1rem;
+    }
+
+    @include breakpoint(sm down) {
+        &__header .h {
+            color: #283b58;
+            font-size: 2rem;
+            font-weight: 700;
+            line-heght: 2.4rem;
+            letter-spacing: -0.4px;
+        }
+    
+        &__subheader .h {
+            color: #243959;
+            font-size: 1.5rem;
+            line-heght: 2.3rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
